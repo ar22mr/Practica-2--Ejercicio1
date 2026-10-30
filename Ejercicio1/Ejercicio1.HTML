@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="UTF-8">
+        <title>Calcula tu salario</title>
+        <link rel="stylesheet" href="Ejercicio1.CSS">
+    </head>
+    <body>
+        <div id="fondo-animado">
+    <div class="circulo circulo1"></div>
+    <div class="circulo circulo2"></div>
+    <div class="circulo circulo3"></div>
+</div>
+
+        <div id="encabezado">  
+            <h1> Calcula tu salario</h1> 
+        </div>
+<br>
+       <div id="registro">
+        <form method="registro">
+            <label>
+                Ingresa tu Nombre:
+            </label>
+            <input type="text" id="nombre">
+            <br>
+            <br>
+            <label>
+                Ingresa tu Salario Bruto:
+            </label>
+            <input type="number" id="salario">
+            <br>
+            <br>
+            <p>*Recuerde que el salario bruto es el salario que aún no posee deducciones</p>
+            <p>*Su salario bruto es el acordado en su contrato, no lo que recibe en su cuenta personal</p>
+
+        </form>
+        <button type ="button" onclick="calcular()" id="btn-calcular">
+             Calcular 
+            </button>
+
+        <br>
+        
+
+
+       </div>
+<br>
+       <div id="calculos">
+        <H2> Tus Calculos son</H2>
+
+        <p>Nombre: <span id="resultadoNombre"></span></p>
+
+        <p> Salario bruto: ₡<span id="resultadoBruto"></span> </p>
+
+        <p>Cargas soliales por pagar: ₡<span id="resultadoCS"></span></p>
+
+        <p>Impuesto sobre la renta por pagar: ₡<span id="resultadoRenta"></span></p>
+
+        <p> Salario neto: ₡<span id="resultadoNeto"></span></p>
+
+
+       </div>
+<br>
+       <div id="dolares1">
+        <p>Si tu salario es en dolares, revisa el tipo de cambio oficial, al darle click</p>
+        <a href="https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Personalizado/2039?Cuadro=1015" target="_blank">
+            <button> Ver tipo de cambio oficial</button>
+        </a>
+        <p> Coloca en las siguientes casillas tu salario y el tipo de cambio de compra 
+            deseado para conocer tu salario en colones y realizar tu calculo</p>
+        <br>
+       
+        <form method="post">
+            <label>
+                Ingresa tu Salario en dolares:
+            </label>
+            <input type="number" id="salario1" step="0.01">
+            <br>
+            <br>
+
+            <label>
+                Ingresa el tipo de cambio a utilizar:
+            </label>
+            <input type="number" id="cambio" step="0.01">
+            <br>
+            <br>
+
+            <p>*Recuerde que el tipo de cambio es el de compra y no el de venta</p>
+            <p>*Debe usar su salario bruto que es el acordado en su contrato, no lo que recibe en su cuenta personal</p>
+
+        </form>
+
+        <button type="button" onclick= "dolares()" id="dolares"> 
+            Convertir Salario </button>
+        <br>
+
+        <p> Salario en coloner: ₡<span id="resultadoDolar"></span></p>
+        
+       </div>
+
+
+         <script src="Ejercicio1-js.js"></script>
+    </body>
+</html>
